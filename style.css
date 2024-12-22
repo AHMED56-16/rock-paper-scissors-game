@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    background-color: #A1D6CB;
+    overflow-x: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1 {
+    background-color: #FF8383;
+    color: #FFF574;
+    height: 10vh;
+    line-height: 10vh;
+    font-size: 3rem;
+}
+
+#choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5vh;
+    flex-wrap: wrap;
+}
+
+.choice {
+    height: 20vw;
+    width: 20vw;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.choice:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    background-color: #FFF574;
+}
+
+.choice img {
+    height: 90%;
+    width: 90%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#scoreBoard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    font-size: 2rem;
+    margin-top: 5vh;
+    color: #A19AD3;
+    flex-wrap: wrap;
+}
+
+#userScore, #computerScore {
+    font-size: 4rem;
+}
+
+#messageToShow {
+    margin-top: 5vh;
+}
+
+#message {
+    background-color: #FF8383;
+    color: #FFF574;
+    font-size: 2rem;
+    display: inline;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    #choices {
+        gap: 2rem;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #choices {
+        gap: 1.5rem;
+    }
+
+    .choice {
+        height: 25vw;
+        width: 25vw;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #scoreBoard {
+        gap: 2rem;
+        font-size: 1.8rem;
+    }
+
+    #message {
+        font-size: 1.8rem;
+    }
+
+    #userScore, #computerScore {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #choices {
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .choice {
+        height: 30vw;
+        width: 30vw;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    #scoreBoard {
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    #userScore, #computerScore {
+        font-size: 3rem;
+    }
+
+    #message {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 375px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .choice {
+        height: 35vw;
+        width: 35vw;
+    }
+
+    #userScore, #computerScore {
+        font-size: 2.5rem;
+    }
+
+    #scoreBoard {
+        font-size: 1.3rem;
+    }
+
+    #message {
+        font-size: 1.2rem;
+        padding: 0.8rem;
+    }
+}
